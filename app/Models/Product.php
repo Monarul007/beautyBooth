@@ -18,4 +18,8 @@ class Product extends Model
     public function reviews() {
         return $this->hasMany(ProductReview::class, 'product_id');
     }
+
+    public function orderDetails(){
+        return $this->hasMany(OrderDetail::class, 'product_id');
+    }
 }
